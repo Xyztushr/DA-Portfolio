@@ -28,10 +28,25 @@ body{
 
 /* ---------- Background Canvas ---------- */
 
+/* Keep background effects behind everything */
 #particles{
-  position:fixed;
-  inset:0;
-  z-index:-5;
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+}
+
+.grid-overlay,
+.aurora,
+.mouse-glow{
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Keep only the hero content above the background */
+.hero-left,
+.hero-right{
+    position: relative;
+    z-index: 2;
 }
 
 /* ---------- Hero ---------- */
